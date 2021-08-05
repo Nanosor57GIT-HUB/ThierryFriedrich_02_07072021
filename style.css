@@ -23,7 +23,7 @@ body {
 }
 sup {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 a {
   color: black;
@@ -32,9 +32,7 @@ a {
 a:hover {
   color: #0065fc;
 }
-sup {
-  font-size: 0.9rem;
-}
+
 .linksCards:hover {
   transform: scale(1.03);
   transition: 0.3s;
@@ -47,6 +45,7 @@ sup {
   height: auto;
   margin-left: 5%;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -55,10 +54,18 @@ sup {
 
 .reservia {
   width: 100px;
+  min-width: 100px;
   height: auto;
 }
 
 /*NAV*/
+.logoNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
 .headerNav {
   flex-wrap: wrap;
   margin-right: 20px;
@@ -66,8 +73,9 @@ sup {
 .barreUl {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   list-style: none;
+  width: 100%;
+  height: 150px;
   margin-right: 100px;
 }
 .navA {
@@ -76,25 +84,25 @@ sup {
   justify-content: center;
 }
 .hébergementsNav a {
-  width: 200px;
+  width: 190px;
   height: 150px;
   color: #0065fc;
   border-top: 3px solid #0065fc;
 }
 .activitésNav a {
-  width: 200px;
+  width: 190px;
   height: 150px;
 }
 .inscription {
-  width: 150px;
-  height: 152px;
+  width: 100px;
+  height: auto;
   color: #0065fc;
   font-weight: bold;
 }
 .inscriptionNav {
   position: absolute;
-  top: 0;
-  right: 2.5%;
+  top: 65px;
+  right: 4%;
   list-style: none;
 }
 
@@ -217,12 +225,15 @@ input:focus {
 
 .infoBlock {
   display: flex;
-  align-items: center;
   width: 90%;
+  height: 30px;
   margin: 2% 0 0 5%;
 }
 .infoBlock .fas {
   display: flex;
+}
+.infoBlock p {
+  margin-top: 5px;
 }
 .fa-info {
   color: #0065fc;
@@ -256,7 +267,7 @@ input:focus {
   justify-content: space-evenly;
   align-items: center;
   width: 62%;
-  height: 600px;/*100%*/
+  height: 600px; /*100%*/
   border-radius: 25px;
   background-color: #f2f2f2;
 }
@@ -279,7 +290,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   width: 29%;
-  height: 200px;/*39%*/
+  height: 200px; /*39%*/
   border-radius: 20px;
   background-color: white;
   box-shadow: 2px 0 25px #deebff;
@@ -296,11 +307,10 @@ input:focus {
   padding: 2px;
 }
 .nameAcco {
-  width: 95%;;
+  width: 95%;
   height: 30%;
   font-size: 0.9rem;
   margin: 2% 0 0 5%;
-  border: 1px solid;
 }
 .star1 {
   font-size: 0.9rem;
@@ -551,7 +561,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1024px) {     
+@media screen and (max-width: 1024px) {
   /******************FILTRES*******************/
   .filtres {
     margin-right: 0px;
@@ -572,7 +582,7 @@ footer {
   }
   #marseilleContainer {
     width: 100%;
-    height: 50%;/*65*/
+    height: 50%; /*65*/
   }
   .accoMarseilleTitle {
     align-items: center;
@@ -585,8 +595,7 @@ footer {
     border-radius: 18px 18px 0 0;
   }
   .nameAcco {
-    width: 95%;
-    width: 100%;
+    width: 96%;
     font-size: 0.8rem;
     margin: 0 0 0 3%;
   }
@@ -600,24 +609,29 @@ footer {
   /**************POPULAIRES*****************/
   #morePopularsContainer {
     width: 100%;
-    height: 45%;/*28%*/
+    height: 45%;
   }
   .morePopularsTitle {
     width: 94%;
     height: 5%;
   }
   .blockPopuCards {
+    flex-direction: column;
     width: 100%;
-    height: 80%;/*80%*/
+    height: 80%;
   }
   .cardPopu {
-    width: 800px;
+    width: 90%;
     min-width: 30%;
-    height: 120px; /*84*/
+    height: 30%;
   }
   .cardPopu,
   .imgPopu {
     padding: 0.3%;
+    min-width: 30%;
+  }
+  .paragraphePopu {
+    width: 100%;
   }
   .namePopu h3 {
     font-size: 0.9rem;
@@ -629,9 +643,10 @@ footer {
   .star2 {
     display: flex;
     justify-content: flex-end;
+    width: 98%;
     margin-right: 7%;
     font-size: 0.7rem;
-    margin-bottom: 3%;
+    margin-bottom: 0%;
   }
   .fa-star {
     margin: 1%;
@@ -697,75 +712,53 @@ footer {
   }
 }
 
-@media screen and (max-width: 925px) {
-  .cardPopu {
-    width: 90%;
-    height: 30%;
-  }
-  .blockPopuCards {
-    flex-direction: column;
-  }
-  #morePopularsContainer {
-    height: 45%;
-  }
-  .morePopularsTitle {
-    height: 30px;
-  }
-  .paragraphePopu {
-    width: 100%;
-  }
-  .star2 {
-    margin-top: 18px;
-    margin-bottom: 0;
-    width: 99%;
-  }
-  .imgPopu {
-    min-width: 160px;
-  }
-  #marseilleContainer {
-    height: 50%;
-  }
-  .accoContainer {
-    height: 1000px;
-  }
-}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 775px) {
+  /*****************a vérifier*************************/
   .headerBlock {
     width: 100%;
     margin-left: 0;
   }
-  /*logo*/
-  .reservia {
-    width: 110px;
+  .logoNav {
+    flex-direction: column;
+    align-items: start;
+    width: 90%;
     margin-left: 5%;
   }
-
   /*NAV*/
   .barreUl {
-    flex-wrap: nowrap;
-    margin-right: 0;
-    margin-top: 30px;
+    width: 360px;
+    height: 60px;
   }
   .hébergementsNav a {
-    width: 190px;
+    width: 205px;
     height: 50px;
     border-top-style: none;
     border-bottom: 2px solid #0065fc;
   }
   .activitésNav a {
-    width: 183px;
+    width: 205px;
     height: 50px;
     border-bottom: 2px solid rgba(0, 101, 252, 0.1);
   }
-  .inscription {
-    width: 90px;
-    height: 60px;
+  .inscriptionNav {
+    top: 20px;
+    right: 2%;
   }
 
   /*Title Page*/
   .titlePage {
     margin-top: 30px;
   }
+}
+@media screen and (max-width: 600px) {
+  .logoNav {
+    width: 100%;
+    margin-left: 0;
+  }
+  .reservia {
+    margin-left: 5%;
+  }
+
   /*RESEARCH BUTTON*/
 
   .researchBlock {
@@ -773,7 +766,7 @@ footer {
   }
   #siteSearch {
     width: 270px;
-    min-width: 200px;
+    min-width: 160px;
     height: 50px;
   }
   .btnSubmitResearch {
@@ -821,7 +814,6 @@ footer {
     width: 100%;
     height: 68%; /*65%*/
     background-color: white;
-    
   }
   .blockAccoCards {
     width: 100%;
@@ -890,7 +882,7 @@ footer {
   #titleActivity {
     font-size: 1.4rem;
   }
-  .containerCardsActi { 
+  .containerCardsActi {
     height: 2100px;
   }
   .cardActi {
@@ -901,10 +893,9 @@ footer {
     height: 125px;
   }
 
-  /********************FOOTER*******************/ 
+  /********************FOOTER*******************/
   .containerFooter {
     flex-direction: column;
-  
   }
   .footerScript {
     margin-right: 0;
@@ -912,5 +903,104 @@ footer {
   .footerNav {
     margin-top: 10px;
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .infoBlock .fas {
+    margin-bottom: 0%;
+  }
+}
+@media screen and (max-width: 427px) {
+  .hébergementsNav a {
+    width: 186px;
+  }
+  .activitésNav a {
+    width: 186px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .hébergementsNav a {
+    width: 206px;
+  }
+  .activitésNav a {
+    width: 206px;
+  }
+}
+.infoBlock .fas {
+  margin-bottom: 6%;
+}
+@media screen and (max-width: 411px) {
+  .researchBlock {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .hébergementsNav a {
+    width: 187px;
+  }
+  .activitésNav a {
+    width: 187px;
+  }
+  .infoBlock .fas {
+    margin-bottom: 6%;
+  }
+}
+.researchBlock {
+  justify-content: start;
+}
+@media screen and (max-width: 320px) {
+  .hébergementsNav a {
+    width: 160px;
+  }
+  .activitésNav a {
+    width: 160px;
+  }
+  #siteSearch {
+    width: 190px;
+  }
+  .loupeSearch {
+    margin-left: 215px;
+  }
+  .titlePage h1 {
+    font-size: 1.2rem;
+  }
+  .titlePage p {
+    font-size: 0.9rem;
+    margin-top: 3%;
+  }
+}
+@media screen and (max-width: 310px) {
+  /**************POPULAIRES*****************/
+  .cardPopu,
+  .imgPopu {
+    padding: 0.3%;
+    min-width: 100px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .barreUl {
+    width: 100%;
+  }
+  .hébergementsNav a {
+    width: 140px;
+  }
+  .activitésNav a {
+    width: 140px;
+  }
+
+  #siteSearch {
+    width: 170px;
+  }
+  .loupeSearch {
+    margin-left: 200px;
+  }
+  ::placeholder {
+    font-size: 0.9rem;
+  }
+  .footerScript {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }
