@@ -919,7 +919,10 @@ footer {
 .infoBlock .fas {
   margin-bottom: 6%;
 }
-
+.nameAccoPopular h3{
+  font-size: 1.1rem;
+  padding-right: 42px;
+}
 @media screen and (max-width: 411px) {
   /*Recherche sur site*/
   .researchBlock {
@@ -974,6 +977,7 @@ footer {
     margin-left: 238px;
   }
 }
+
 @media screen and (max-width: 320px) {
   /*Navigation header*/
   .hébergementsNav a {
@@ -1004,7 +1008,9 @@ footer {
     margin-left: 238px;
   }
 }
-
+.footerScript, .footerNav {
+  font-size: 1.1rem;
+}
 @media screen and (max-width: 310px) {
   /*Populaires*/
   .popularCard,
