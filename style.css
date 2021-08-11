@@ -134,7 +134,7 @@ h1 {
   height: 50px;
   border-radius: 15px 0 0 15px;
 }
-#siteSearch {                      
+#siteSearch {
   border: 1px solid #deebff;
   width: 250px;
   min-width: 200px;
@@ -155,6 +155,7 @@ h1 {
   min-width: 100px;
   height: 50px;
   cursor: pointer;
+  font-size: 1rem;
 }
 /*input:focus {
   outline: 0;
@@ -919,7 +920,7 @@ footer {
 .infoBlock .fas {
   margin-bottom: 6%;
 }
-.nameAccoPopular h3{
+.nameAccoPopular h3 {
   font-size: 1.1rem;
   padding-right: 42px;
 }
@@ -969,7 +970,7 @@ footer {
   .headerUl {
     width: 360px;
   }
-   /*Recherche sur site*/
+  /*Recherche sur site*/
   #siteSearch {
     width: 225px;
   }
@@ -1008,7 +1009,8 @@ footer {
     margin-left: 238px;
   }
 }
-.footerScript, .footerNav {
+.footerScript,
+.footerNav {
   font-size: 1.1rem;
 }
 @media screen and (max-width: 310px) {
